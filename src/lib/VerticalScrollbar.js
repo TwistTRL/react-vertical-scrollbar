@@ -1,4 +1,4 @@
-import React, {PureComponent} from "react";
+import React, {PureComponent,Fragment} from "react";
 import PropTypes from 'prop-types';
 import DragOverlay from "./DragOverlay";
 import "./VerticalScrollbar.css";
@@ -27,7 +27,7 @@ class VerticalScrollbar extends PureComponent {
     
     if (mode===MODE_HOVERING){
       return (
-        <>
+        <Fragment>
           <div  className="VerticalScrollbar-container" 
                 style={{height:height,width:width}}
                 onMouseDown={this.startGroveDragging}
@@ -41,12 +41,12 @@ class VerticalScrollbar extends PureComponent {
                   >
             </div>
           </div>
-        </>
+        </Fragment>
       );
     }
     else if (mode===MODE_GROVE_DRAGGING) {
       return (
-        <>
+        <Fragment>
           <div  className="VerticalScrollbar-container" 
                 style={{height:height,width:width}}
                 ref={this.ref}
@@ -63,12 +63,12 @@ class VerticalScrollbar extends PureComponent {
                         mouseUpHandler={this.endDragging}
                         style={{height:thumbHeight,top:thumbTop}}
                         cursor="ns-resize"/>
-        </>
+        </Fragment>
       );
     }
     else if (mode===MODE_THUMB_DRAGGING) {
       return (
-        <>
+        <Fragment>
           <div  className="VerticalScrollbar-container" 
                 style={{height:height,width:width}}
                 ref={this.ref}
@@ -84,7 +84,7 @@ class VerticalScrollbar extends PureComponent {
           <DragOverlay mouseMoveHandler={this.handleThumbDraggingMouseMove}
                        mouseUpHandler={this.endDragging}
                        cursor="ns-resize"/>
-        </>
+        </Fragment>
       );
     }
     else {
@@ -124,7 +124,6 @@ class VerticalScrollbar extends PureComponent {
   
   handleThumbDraggingMouseMove = (ev)=> {
     let {height, realHeight} = this.props;
-    let domY = ev.clientY - this.ref.current.getBoundingClientRect().top;
     let scrollStart = this.snapshot.scrollStart + realHeight/height*(ev.clientY-this.snapshot.clientY);
     this.updateScrollStart(scrollStart);
   }
