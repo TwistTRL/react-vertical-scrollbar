@@ -3,8 +3,8 @@
 https://twisttrl.github.io/react-vertical-scrollbar/
 
 ## Example
-`
+```
 <VerticalScrollbar  {...this.state}
                     updateScrollStartHandler={(scrollStart)=>this.setState({scrollStart})}
                     />
-`
+```
