@@ -2,7 +2,7 @@
 ** Demo **
 https://twisttrl.github.io/react-vertical-scrollbar/
 
-** EXample **
+** Example **
 <VerticalScrollbar  {...this.state}
                     updateScrollStartHandler={(scrollStart)=>this.setState({scrollStart})}
                     />
