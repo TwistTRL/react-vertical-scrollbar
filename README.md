@@ -4,7 +4,11 @@ https://twisttrl.github.io/react-vertical-scrollbar/
 
 ## Example
 ```
-<VerticalScrollbar  {...this.state}
-                    updateScrollStartHandler={(scrollStart)=>this.setState({scrollStart})}
+<VerticalScrollbar  width {/*width of the widget*/}
+                    height {/*height of the widget*/}
+                    realHeight {/*total height of a overflowing component*/}
+                    realRange {/*visible range of a overflowing component*/}
+                    scrollStart {/*scroll offset of the visible range*/}
+                    updateScrollStartHandler {/**/}
                     />
 ```
