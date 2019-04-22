@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import ReactDOM from 'react-dom';
 
 import VerticalScrollbar from "./lib";
@@ -13,7 +13,7 @@ class App extends Component {
   render(){
     let {width,height,color,realHeight,realRange,scrollStart} = this.state;
     return (
-      <>
+      <Fragment>
         <div>
           width:
           <input  type="text"
@@ -71,7 +71,7 @@ class App extends Component {
         <VerticalScrollbar  {...this.state}
                             updateScrollStartHandler={(scrollStart)=>this.setState({scrollStart})}
                             />
-      </>
+      </Fragment>
     );
   }
 }

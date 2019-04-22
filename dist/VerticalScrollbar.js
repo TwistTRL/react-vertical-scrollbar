@@ -83,7 +83,6 @@ var VerticalScrollbar = function (_PureComponent) {
           height = _this$props3.height,
           realHeight = _this$props3.realHeight;
 
-      var domY = ev.clientY - _this.ref.current.getBoundingClientRect().top;
       var scrollStart = _this.snapshot.scrollStart + realHeight / height * (ev.clientY - _this.snapshot.clientY);
       _this.updateScrollStart(scrollStart);
     };
@@ -112,7 +111,7 @@ var VerticalScrollbar = function (_PureComponent) {
 
       if (mode === MODE_HOVERING) {
         return _react2.default.createElement(
-          Fragment,
+          _react.Fragment,
           null,
           _react2.default.createElement(
             "div",
@@ -130,7 +129,7 @@ var VerticalScrollbar = function (_PureComponent) {
         );
       } else if (mode === MODE_GROVE_DRAGGING) {
         return _react2.default.createElement(
-          Fragment,
+          _react.Fragment,
           null,
           _react2.default.createElement(
             "div",
@@ -151,7 +150,7 @@ var VerticalScrollbar = function (_PureComponent) {
         );
       } else if (mode === MODE_THUMB_DRAGGING) {
         return _react2.default.createElement(
-          Fragment,
+          _react.Fragment,
           null,
           _react2.default.createElement(
             "div",

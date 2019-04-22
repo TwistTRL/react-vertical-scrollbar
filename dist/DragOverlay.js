@@ -60,7 +60,7 @@ var DragOverlay = function (_PureComponent) {
     value: function render() {
       var cursor = this.props.cursor;
 
-      return _react2.default.createElement("div", { className: "fullscreen", style: { cursor: cursor } });
+      return _react2.default.createElement("div", { className: "DragOverlay-fullscreen", style: { cursor: cursor } });
     }
   }, {
     key: "componentDidMount",

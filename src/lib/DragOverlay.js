@@ -6,7 +6,7 @@ import "./DragOverlay.css"
 class DragOverlay extends PureComponent {
   render() {
     let { cursor} = this.props
-    return <div className="fullscreen" style={{cursor:cursor}}></div>
+    return <div className="DragOverlay-fullscreen" style={{cursor:cursor}}></div>
   }
 
   componentDidMount(){
