@@ -2,7 +2,7 @@
   "name": "react-vertical-scrollbar",
   "version": "0.1.0",
   "peerDependencies": {
-    "proptypes": "^1.1.0",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6"
   },
   "scripts": {
